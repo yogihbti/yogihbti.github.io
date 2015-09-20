@@ -1,4 +1,4 @@
-title:            CodeInventory
+title:            Test Site
 description:      "Nerd's feeder!"
 logo:             logo.png
 disqus_shortname: codeinventorycom
@@ -14,15 +14,15 @@ destination: ../yogihbti.github.io-pages/
 
 # Owner/author information
 owner:
-  name:           Amey Jadiye
+  name:           Yogesh Kumar
   avatar:         ameyjadiye.jpg
-  email:          ameyjadiye@gmail.com
+  email:          yogihbti@gmail.com
   # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
   description:    Programming is 1% knowledge, 2% ability and 97% getting the ability to work with the knowledge :)
   # Social networking links used in footer. Update and remove as you like.
   twitter:        ameyjadiye
   facebook:       ameyjadiye
-  github:         ameyjadiye    
+  github:         yogihbti    
   instagram:      ameyjadiye
   # For Google Authorship https://plus.google.com/authorship
   google_plus:    https://plus.google.com/u/0/+AmeyJadiye
