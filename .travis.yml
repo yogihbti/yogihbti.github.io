@@ -1,0 +1,23 @@
+language: ruby
+
+rvm:
+- 2.1
+
+install: bundle install
+script: bundle exec rake site:deploy --quiet
+
+branches:
+  only:
+  - source     # test the gh-pages branch
+
+env:
+
+  secure: "mjjXACp9xtuxVbO52JEBpmz9RpF/wuKAGvOQA31t23KFxGgyr74XZ5zIdFzkRSNSVPZk6
+Aq8lTZHlDmXlrqAMnqUipnr+Ao2p806cN4SA5kIaFq0AtpMNu+/QTyxXrzVlhvWNwV2WZgjs39ZXkslS
+ka8irc8GLHDQ6K3vu44Ru/6QxagBT92ag3IMhy8NiLu9X1rIuusHRHFCyR7mRaghhBZseWWJLj+7bqWt
+p9ylNxvdbCSgEFpawZzlasePTs0k24dmAFZdQ0wKcjS0Uri3/UQug+RxglVmtZQ7ASjap+rD0mMdlR/o
+nPqrbVg4UOkhSS5/n0S8NRKeYjUbdqmpM2MB4wdYTmh3hST8KQ0tO4Uze9WLK1WyKWbh1cmr5zM9t4LM
+3LpjlpYYo/2g6R6nwIMrjWlL8jQFucUzdYtj1oEVyt6ZC4UgyUS/Kh+4Dy1kr2QsAiX8ik80NL6kns1g
+B0qa7Iizxwd+Ffr+0Ev8R/3TCUn5wYi41cGinYV6ziCD80QZIrLphHMoN2iFPFxbP3z5HuiETN/vGUup
+2VVVLChX9x48w+zZF1XWm0Iwbw5CDHVdaeJjVnD1Pu2kgxVjLKg0G2gi9APMjbzeFSeELXoz22XSE/ZU
+fb0R04K6/m8CfrYY2miEYGuaPuMU9cjmhloZcPR1aNtVS+yQPq2uwU="
