@@ -1,7 +1,7 @@
-title:            Test Site
-description:      "Data Analysis"
+title:            Journey of Data to Insights 
+description:      "In Pursuit of Insights hidden in Data"
 logo:             logo.png
-disqus_shortname: codeinventorycom
+disqus_shortname: yogihbti
 share:            true
 dropcap:	   true
 # Change url to your domain. Leave localhost server or blank when working locally.
@@ -15,20 +15,20 @@ destination: ../yogihbti.github.io-pages/
 # Owner/author information
 owner:
   name:           Yogesh Kumar
-  avatar:         ameyjadiye.jpg
+  avatar:         yogihbti.jpg
   email:          yogihbti@gmail.com
   # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
-  description:    Programming is 1% knowledge, 2% ability and 97% getting the ability to work with the knowledge :)
+  description:    Data Science: An interdisciplinary field about processes and systems to extract knowledge or insights from large volumes of data in various forms, either structured or unstructured.
   # Social networking links used in footer. Update and remove as you like.
-  twitter:        ameyjadiye
-  facebook:       ameyjadiye
+  twitter:        yogihbti
+  facebook:       yogihbti
   github:         yogihbti    
-  instagram:      ameyjadiye
+  instagram:      
   # For Google Authorship https://plus.google.com/authorship
-  google_plus:    https://plus.google.com/u/0/+AmeyJadiye
+  google_plus:    https://plus.google.com/u/0/+yogihbti
 
 # Analytics and webmaster tools stuff goes here
-google_analytics:   UA-46791108-1
+google_analytics:   
 google_verify:      
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:         
