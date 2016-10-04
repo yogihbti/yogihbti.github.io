@@ -5,4 +5,4 @@ gem "github-pages"
 gem "rake"
 gem "jemoji"
 gem "coderay"
-gem "pygments"
+gem 'pygments.rb', '~> 0.6.3'
