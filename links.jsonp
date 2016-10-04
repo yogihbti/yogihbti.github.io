@@ -73,6 +73,11 @@ callback([
   {
     "text": "RC Plane - Preplan",
     "href": "http://yogihbti.github.io/embedded/2015/09/01/rc-plane-pre-planning/"
+  } ,
+
+  {
+    "text": "Demand Planning an Introduction",
+    "href": "http://yogihbti.github.io/scm/2016/10/04/demand-planning-guide/"
   } 
 
 ])

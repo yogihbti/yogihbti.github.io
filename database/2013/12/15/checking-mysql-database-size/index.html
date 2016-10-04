@@ -123,17 +123,18 @@
   <li>Index length</li>
 </ul>
 
-<h3 id="checking-for-full-database-size-on-server--">Checking for full database size on server :-</h3>
+<p>###Checking for full database size on server :-</p>
 
-<div class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">SELECT</span> <span class="n">table_schema</span> <span class="ss">&quot;Database Name&quot;</span><span class="p">,</span> <span class="k">SUM</span><span class="p">(</span> <span class="n">data_length</span> <span class="o">+</span> <span class="n">index_length</span><span class="p">)</span>
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"> 
+<span class="k">SELECT</span> <span class="n">table_schema</span> <span class="ss">&quot;Database Name&quot;</span><span class="p">,</span> <span class="k">SUM</span><span class="p">(</span> <span class="n">data_length</span> <span class="o">+</span> <span class="n">index_length</span><span class="p">)</span>
  <span class="o">/</span> <span class="mi">1024</span> <span class="o">/</span> <span class="mi">1024</span> <span class="o">/</span><span class="mi">1024</span> <span class="ss">&quot;Size in GB&quot;</span> <span class="k">FROM</span> <span class="n">information_schema</span><span class="p">.</span><span class="n">TABLES</span>
- <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">table_schema</span><span class="p">;</span></code></pre></div>
+ <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">table_schema</span><span class="p">;</span></code></pre></figure>
 
-<h3 id="checking-in-details-with-each-table-size-in-single-schema--">Checking in details with each table size in single schema :-</h3>
+<p>###Checking in details with each table size in single schema :-</p>
 
-<div class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">SELECT</span> <span class="k">TABLE_NAME</span><span class="p">,</span> <span class="n">table_rows</span><span class="p">,</span> <span class="n">data_length</span><span class="p">,</span> <span class="n">index_length</span><span class="p">,</span> 
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">SELECT</span> <span class="k">TABLE_NAME</span><span class="p">,</span> <span class="n">table_rows</span><span class="p">,</span> <span class="n">data_length</span><span class="p">,</span> <span class="n">index_length</span><span class="p">,</span> 
 <span class="n">round</span><span class="p">(((</span><span class="n">data_length</span> <span class="o">+</span> <span class="n">index_length</span><span class="p">)</span> <span class="o">/</span> <span class="mi">1024</span> <span class="o">/</span> <span class="mi">1024</span> <span class="o">/</span> <span class="mi">1024</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span> <span class="ss">&quot;Size in GB&quot;</span>
-<span class="k">FROM</span> <span class="n">information_schema</span><span class="p">.</span><span class="n">TABLES</span> <span class="k">WHERE</span> <span class="n">table_schema</span> <span class="o">=</span> <span class="ss">&quot;your_schema_name&quot;</span><span class="p">;</span></code></pre></div>
+<span class="k">FROM</span> <span class="n">information_schema</span><span class="p">.</span><span class="n">TABLES</span> <span class="k">WHERE</span> <span class="n">table_schema</span> <span class="o">=</span> <span class="ss">&quot;your_schema_name&quot;</span><span class="p">;</span></code></pre></figure>
 
 <p><em>For checking the database size in MB just remove one ‘/1024’ from quries.</em></p>
 
@@ -234,7 +235,7 @@
 
     <footer class="notepad-site-footer">
     <div class="copyright">
-        <section>All content copyright <a href="http://yogihbti.github.io/about">Yogesh Kumar</a> &copy; 2015 &bull; All rights reserved.</section>
+        <section>All content copyright <a href="http://yogihbti.github.io/about">Yogesh Kumar</a> &copy; 2016 &bull; All rights reserved.</section>
 	<p><a href='http://www.catb.org/hacker-emblem/' target="_blank"><img src='/assets/img/hacker.png' alt='hacker emblem' /></a>
           <a href="http://endsoftpatents.org/innovating-without-patents" target="_blank"><img style="border-width:0" src="/assets/img/patent-free.png"></a></p>
     </div>

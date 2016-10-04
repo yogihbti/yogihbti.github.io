@@ -120,7 +120,7 @@
 
 <p>taking an example ,i need to fetch data from mysql again and again and have to write big repeated code again and again ,let’s write a function for that and just pass your query to it</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/bin/sh</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/bin/sh</span>
  
 sql_exec<span class="o">()</span>
 <span class="o">{</span>
@@ -136,9 +136,9 @@ sql_exec<span class="o">()</span>
  
 <span class="nv">engr_count</span><span class="o">=</span><span class="k">$(</span>sql_exec <span class="s2">&quot;select count(*) from my_table where job=&#39;ENGR&#39;&quot;</span><span class="k">)</span>
  
-<span class="nb">echo</span> <span class="s1">&#39;total engineer count is &#39;</span><span class="nv">$engr_count</span> <span class="s1">&#39; this saved my code repeating &#39;</span></code></pre></div>
+<span class="nb">echo</span> <span class="s1">&#39;total engineer count is &#39;</span><span class="nv">$engr_count</span> <span class="s1">&#39; this saved my code repeating &#39;</span></code></pre></figure>
 
-<p>Here i passed all the coming arguments to functions to mysql by $@ you can differentiate  arguments by $1 $2 $3 ….. $n </p>
+<p>Here i passed all the coming arguments to functions to mysql by $@ you can differentiate  arguments by $1 $2 $3 ….. $n</p>
 
 <p>Always remember unlike C ,Java or any other language you must write functions before calling to it.</p>
 
@@ -243,7 +243,7 @@ sql_exec<span class="o">()</span>
 
     <footer class="notepad-site-footer">
     <div class="copyright">
-        <section>All content copyright <a href="http://yogihbti.github.io/about">Yogesh Kumar</a> &copy; 2015 &bull; All rights reserved.</section>
+        <section>All content copyright <a href="http://yogihbti.github.io/about">Yogesh Kumar</a> &copy; 2016 &bull; All rights reserved.</section>
 	<p><a href='http://www.catb.org/hacker-emblem/' target="_blank"><img src='/assets/img/hacker.png' alt='hacker emblem' /></a>
           <a href="http://endsoftpatents.org/innovating-without-patents" target="_blank"><img style="border-width:0" src="/assets/img/patent-free.png"></a></p>
     </div>

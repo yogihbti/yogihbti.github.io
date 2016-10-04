@@ -2,23 +2,23 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>USING MYSQL DUMP &vert; JOURNEY OF DATA TO INSIGHTS</title>
+<title>DEMAND PLANNING AN INTRODUCTION &vert; JOURNEY OF DATA TO INSIGHTS</title>
 <meta name="description" content="In Pursuit of Insights hidden in Data">
-<meta name="keywords" content="database, mysql">
+<meta name="keywords" content="demand planning, scm, forecasting">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yogihbti.github.io/images/logo.png">
-<meta name="twitter:title" content="Using MySQL dump">
+<meta name="twitter:title" content="Demand Planning an Introduction">
 <meta name="twitter:description" content="In Pursuit of Insights hidden in Data">
 <meta name="twitter:creator" content="@yogihbti">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Using MySQL dump">
+<meta property="og:title" content="Demand Planning an Introduction">
 <meta property="og:description" content="In Pursuit of Insights hidden in Data">
-<meta property="og:url" content="http://yogihbti.github.io/database/2013/12/17/using-mysql-dump/">
+<meta property="og:url" content="http://yogihbti.github.io/scm/2016/10/04/demand-planning-guide/">
 <meta property="og:site_name" content="Journey of Data to Insights">
 <meta property="og:image" content="http://yogihbti.github.io/images/">
 
@@ -26,7 +26,7 @@
 
 
 
-<link rel="canonical" href="http://yogihbti.github.io/database/2013/12/17/using-mysql-dump/">
+<link rel="canonical" href="http://yogihbti.github.io/scm/2016/10/04/demand-planning-guide/">
 <link href="http://yogihbti.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Journey of Data to Insights Feed">
 <link rel="author" href="https://plus.google.com/u/0/+yogihbti?rel=author">
 
@@ -104,64 +104,104 @@
                 <div class="notepad-post-title-simple row">
                     <div class="small-12 columns">
                         <div class="notepad-post-meta-simple">
-                            <h1>Using MySQL dump</h1>
-                            <p>by <strong>Yogesh Kumar</strong> &#8212; on <a href="http://yogihbti.github.io/tags/index.html#database" data-toggle="tooltip" title="Posts tagged with database" rel="tag">database</a>&nbsp;&comma;&nbsp;<a href="http://yogihbti.github.io/tags/index.html#mysql" data-toggle="tooltip" title="Posts tagged with mysql" rel="tag">mysql</a> <strong><time datetime="2013-12-17T20:00:00+05:30">17 Dec 2013</time></strong></p>
+                            <h1>Demand Planning an Introduction</h1>
+                            <p>by <strong>Yogesh Kumar</strong> &#8212; on <a href="http://yogihbti.github.io/tags/index.html#demand planning" data-toggle="tooltip" title="Posts tagged with demand planning" rel="tag">demand planning</a>&nbsp;&comma;&nbsp;<a href="http://yogihbti.github.io/tags/index.html#scm" data-toggle="tooltip" title="Posts tagged with scm" rel="tag">scm</a>&nbsp;&comma;&nbsp;<a href="http://yogihbti.github.io/tags/index.html#forecasting" data-toggle="tooltip" title="Posts tagged with forecasting" rel="tag">forecasting</a> <strong><time datetime="2016-10-04T20:30:00+05:30">04 Oct 2016</time></strong></p>
                         </div>
                     </div>
                 </div>
             </header>
 
         <article class="notepad-post-content post tag-simple">
-            <div><p>HI All, mysqldump is a very handy and useful command for keeping backup of your Db or to migrate them to another server.</p>
-
-<p>lets see how can we use it in different way ..</p>
+            <div><p>In this post i will explain you how to capture http-request header in JAX-RS.</p>
 
 <ul>
-  <li>To take a backup of data from mysqlserver itsself</li>
+  <li>Using @HeaderParam</li>
+  <li>Using @Context</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="n">mysqldump</span> <span class="o">-</span><span class="n">u</span> <span class="n">root</span> <span class="o">-</span><span class="n">p</span><span class="s1">&#39;my_password&#39;</span> <span class="n">my_db_name</span> <span class="o">&gt;</span> <span class="o">/</span><span class="n">root</span><span class="o">/</span><span class="n">my_dump_file</span><span class="p">.</span><span class="k">sql</span></code></pre></figure>
+<p>###@HeaderParam Example</p>
 
-<ul>
-  <li>To take dump from remote server where i have access.</li>
-</ul>
+<p>In this example we can have only the selected attribute we want , JAX-RS will have filter internally and return you the selected Attributes</p>
 
-<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="n">mysqldump</span> <span class="o">-</span><span class="n">h</span> <span class="n">xxxxx</span><span class="p">.</span><span class="n">xxx</span><span class="p">.</span><span class="n">us</span><span class="o">-</span><span class="n">east</span><span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="n">rds</span><span class="p">.</span><span class="n">amazonaws</span><span class="p">.</span><span class="n">com</span> <span class="o">-</span><span class="n">u</span> <span class="n">root</span> <span class="o">-</span><span class="n">p</span><span class="s1">&#39;my_aws_password&#39;</span> <span class="n">my_remot_db_name</span>   <span class="o">&gt;</span> <span class="o">/</span><span class="n">vol1</span><span class="o">/</span><span class="n">my_dump_file</span><span class="p">.</span><span class="k">sql</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="kn">require</span><span class="p">(</span>fpp<span class="p">)</span>
 
-<ul>
-  <li>To take dump from remote server but with only selected tables  where i have access.</li>
-</ul>
+nts<span class="o">=</span>ts<span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="m">11</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">32</span><span class="p">,</span><span class="m">78</span><span class="p">))</span>
 
-<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="n">mysqldump</span> <span class="o">-</span><span class="n">h</span> <span class="n">xxxxx</span><span class="p">.</span><span class="n">xxx</span><span class="p">.</span><span class="n">us</span><span class="o">-</span><span class="n">east</span><span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="n">rds</span><span class="p">.</span><span class="n">amazonaws</span><span class="p">.</span><span class="n">com</span> <span class="o">-</span><span class="n">u</span> <span class="n">root</span> <span class="o">-</span><span class="n">p</span><span class="s1">&#39;my_aws_password&#39;</span> <span class="n">my_remot_db_name</span>  <span class="n">table3</span> <span class="n">table2</span> <span class="n">table3</span> <span class="o">&gt;</span> <span class="o">/</span><span class="n">vol1</span><span class="o">/</span><span class="n">my_dump_file</span><span class="p">.</span><span class="k">sql</span></code></pre></figure>
+t<span class="o">=</span>forecast<span class="p">(</span>nts<span class="p">)</span>
 
-<ul>
-  <li>Resorting back dump  to local  mysqlserver</li>
-</ul>
+plot<span class="p">(</span><span class="kp">t</span><span class="p">)</span>
+ </code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="n">mysql</span>  <span class="o">-</span><span class="n">u</span> <span class="n">root</span> <span class="o">-</span><span class="n">p</span><span class="s1">&#39;my_aws_password&#39;</span> <span class="n">my_remot_db_name</span>   <span class="o">&lt;</span> <span class="o">/</span><span class="n">vol1</span><span class="o">/</span><span class="n">my_dump_file</span><span class="p">.</span><span class="k">sql</span></code></pre></figure>
+<p>This will going to print below output :</p>
 
-<ul>
-  <li>Resorting back dump  to remote  mysqlserver</li>
-</ul>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">User Agent : Mozilla/5.0 <span class="o">(</span>Windows NT 6.1<span class="o">)</span> AppleWebKit/534.30 <span class="o">(</span>KHTML, like Gecko<span class="o">)</span> Chrome/12.0.742.112 Safari/534.30</code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="n">mysql</span>  <span class="o">-</span><span class="n">h</span> <span class="n">xxxxx</span><span class="p">.</span><span class="n">xxx</span><span class="p">.</span><span class="n">us</span><span class="o">-</span><span class="n">east</span><span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="n">rds</span><span class="p">.</span><span class="n">amazonaws</span><span class="p">.</span><span class="n">com</span> <span class="o">-</span><span class="n">u</span> <span class="n">root</span> <span class="o">-</span><span class="n">p</span><span class="s1">&#39;my_aws_password&#39;</span> <span class="n">my_remot_db_name</span>   <span class="o">&lt;</span> <span class="o">/</span><span class="n">vol1</span><span class="o">/</span><span class="n">my_dump_file</span><span class="p">.</span><span class="k">sql</span></code></pre></figure>
+<h3 id="context-example">@Context Example</h3>
 
-<p>Happy Coding …. :)</p>
+<p>@Context gives you the whole damn Request Header</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">javax.ws.rs.Consumes</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.ws.rs.GET</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.ws.rs.Path</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.ws.rs.Produces</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.ws.rs.QueryParam</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.ws.rs.core.Context</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.ws.rs.core.HttpHeaders</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.ws.rs.core.MediaType</span><span class="o">;</span>
+ 
+<span class="kn">import</span> <span class="nn">org.apache.log4j.Logger</span><span class="o">;</span>
+ 
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">RequestHandler</span>
+<span class="o">{</span>
+ 
+    <span class="n">Logger</span> <span class="n">logger</span> <span class="o">=</span> <span class="n">Logger</span><span class="o">.</span><span class="na">getLogger</span><span class="o">(</span><span class="n">RequestHandler</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+ 
+    <span class="kd">private</span> <span class="n">DataServiceController</span> <span class="n">dataServiceController</span><span class="o">;</span>
+ 
+    <span class="nd">@Path</span><span class="o">(</span><span class="s">&quot;/ready&quot;</span><span class="o">)</span>
+    <span class="nd">@GET</span>
+    <span class="nd">@Produces</span><span class="o">(</span><span class="n">MediaType</span><span class="o">.</span><span class="na">TEXT_HTML</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">ready</span><span class="o">(</span><span class="nd">@Context</span> <span class="n">HttpHeaders</span> <span class="n">headers</span><span class="o">)</span>
+    <span class="o">{</span>
+ 
+<span class="k">for</span><span class="o">(</span><span class="n">String</span> <span class="n">header</span> <span class="o">:</span> <span class="n">headers</span><span class="o">.</span><span class="na">getRequestHeaders</span><span class="o">().</span><span class="na">keySet</span><span class="o">()){</span>
+            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">header</span> <span class="o">+</span> <span class="s">&quot;==&gt; &quot;</span><span class="o">);</span>
+             <span class="k">for</span> <span class="o">(</span><span class="n">String</span> <span class="n">value</span> <span class="o">:</span> <span class="n">headers</span><span class="o">.</span><span class="na">getRequestHeader</span><span class="o">(</span><span class="n">header</span><span class="o">))</span> <span class="o">{</span>
+                <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">value</span> <span class="o">+</span> <span class="s">&quot;:&quot;</span><span class="o">);</span>
+            <span class="o">}</span>
+            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+        <span class="o">}</span>
+ 
+<span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+<span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>This will going to print below output :</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">Accept</span><span class="o">==</span>&gt; text/html:application/xhtml+xml:application/xml<span class="p">;</span><span class="nv">q</span><span class="o">=</span>0.9:*/*<span class="p">;</span><span class="nv">q</span><span class="o">=</span>0.8:
+accept-encoding<span class="o">==</span>&gt; gzip:deflate:
+accept-language<span class="o">==</span>&gt; en-US:en<span class="p">;</span><span class="nv">q</span><span class="o">=</span>0.5:
+<span class="nv">connection</span><span class="o">==</span>&gt; keep-alive:
+Content-Type<span class="o">==</span>&gt; 
+<span class="nv">host</span><span class="o">==</span>&gt; localhost:8080:
+user-agent<span class="o">==</span>&gt; Mozilla/5.0 <span class="o">(</span>Macintosh<span class="p">;</span> Intel Mac OS X 10.8<span class="p">;</span> rv:25.0<span class="o">)</span> Gecko/20100101 Firefox/25.0:</code></pre></figure>
+
+<p>Happy Coding .. :)</p>
 
             </div>
         </article>
         <div class="cf"></div>
         <div class="row text-center">
             <section class="notepad-post-share">
-                <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Using MySQL dump&quot;%20http://yogihbti.github.io/database/2013/12/17/using-mysql-dump/%20via%20&#64;yogihbti"
+                <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Demand Planning an Introduction&quot;%20http://yogihbti.github.io/scm/2016/10/04/demand-planning-guide/%20via%20&#64;yogihbti"
                     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
                     <i class="fa fa-twitter"></i>
                 </a>
-                <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=http://yogihbti.github.io/database/2013/12/17/using-mysql-dump/"
+                <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=http://yogihbti.github.io/scm/2016/10/04/demand-planning-guide/"
                     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
                     <i class="fa fa-facebook"></i>
                 </a>
-                <a class="google-icon" href="https://plus.google.com/share?url=http://yogihbti.github.io/database/2013/12/17/using-mysql-dump/"
+                <a class="google-icon" href="https://plus.google.com/share?url=http://yogihbti.github.io/scm/2016/10/04/demand-planning-guide/"
                    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
                     <i class="fa fa-google-plus"></i>
                 </a>
@@ -224,7 +264,7 @@
 -->
 
  
-<div class="fb-comments" data-href="http://yogihbti.github.io/database/2013/12/17/using-mysql-dump/" data-num-posts="4" data-width="706" data-version="v2.3"></div>
+<div class="fb-comments" data-href="http://yogihbti.github.io/scm/2016/10/04/demand-planning-guide/" data-num-posts="4" data-width="706" data-version="v2.3"></div>
 
 
 <div id="fb-root"></div>

@@ -1,6 +1,14 @@
 [
 	
 		{
+		  "title"      : "Demand Planning an Introduction",
+		  "category"   : "scm",
+		  "url"        : "http://yogihbti.github.io/scm/2016/10/04/demand-planning-guide/",
+		  "date"       : "2016-10-04 20:30:00 +0530",
+		  "shortdate"  : "October 04, 2016"
+		} ,
+	
+		{
 		  "title"      : "RC Plane - Preplan",
 		  "category"   : "Embedded",
 		  "url"        : "http://yogihbti.github.io/embedded/2015/09/01/rc-plane-pre-planning/",
